@@ -1,0 +1,36 @@
+!!! 5
+html
+  head
+    include includes/head
+  body#section
+    header
+      sel = '/about.html'
+      include includes/header
+    #hs(role='banner')
+      .container
+        i.sprite.hi
+        hgroup
+          h1 About
+    #content(role='main')
+      .container
+        section#about
+          p.
+            Irbis Lab is an Argentinian software development company
+            founded in 2012. Our mission is to craft through hard-work
+            great web and mobile apps focusing on simplicity and
+            creativity. We pursue excellence and not only our clients’
+            happiness, but also ours.
+          p.
+            We are a small team of developers who are passionate about
+            creating great products. Our entrepreneurial spirit leads
+            us to be constantly nurturing ideas, either for profit
+            or fun.
+          p.
+            We work along entrepreneurs and companies alike, to turn
+            their ideas into outstanding products.
+        include includes/team
+        #new-project
+          p Have a Project in Mind?
+          a.sprite.get-in-touch(href='mailto:hello@irbislab.com')
+            b Get in Touch
+    include includes/footer

@@ -1,13 +1,27 @@
 JADE = ./node_modules/.bin/jade
+SASS = ./node_modules/.bin/node-sass
 
-HTML = 404.html
+HTML = 404.html \
+	index.html \
+	about.html \
+	work.html
+
+CSS = stylesheets/style.css
+
+%.html: %.jade
+	$(JADE) --path $< < $< > $@
+
+%.css: %.scss
+	$(SASS) --output-style=compressed $< $@
+
+all: docs styles
 
 docs: $(HTML)
 
-%.html: %.jade
-	$(JADE) < $< > $@
+styles: $(CSS)
 
 clean:
 	rm -f *.html
+	rm -f stylesheets/*.css
 
-.PHONY: docs clean
+.PHONY: all docs styles clean
