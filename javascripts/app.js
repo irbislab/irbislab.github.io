@@ -17,34 +17,6 @@
   w.qid = function(){
     return document.getElementById(arguments[0]);
   };
-
-  w.qtag = function(){
-    return document.getElementsByTagName(arguments[0]);
-  };
-
-  w.getWindowSize = function(){
-    var w = window;
-    var d = document;
-    var e = d.documentElement;
-    var g = d.getElementsByTagName('body')[0];
-    var width = w.innerWidth || e.clientWidth || g.clientWidth;
-    var height = w.innerHeight || e.clientHeight || g.clientHeight;
-    return { height: height, width: width };
-  };
-
-  w.getHeight = function(el){
-    var borderT = parseFloat(el.style.borderTopWidth) || 0;
-    var borderB = parseFloat(el.style.borderBottomWidth) || 0;
-    var paddingT = parseFloat(el.style.paddingTop) || 0;
-    var paddingB = parseFloat(el.style.paddingBottom) || 0;
-    return el.offsetHeight - borderT - borderB - paddingT - paddingB;
-  };
-
-  w.getScrollY = function(){
-    return (window.pageYOffset !== undefined) ? window.pageYOffset :
-      (document.documentElement || document.body.parentNode || document.body)
-      .scrollTop;
-  }
 })(window);
 
 (function(bean) {
