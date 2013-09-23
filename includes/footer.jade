@@ -1,51 +1,43 @@
 footer
-  #footer-info
-    .container
-      p
-        strong Address:
-        | Olavarria 2531 
-        a.view-map(target='_blank', href='http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Olavarr%C3%ADa+2531,+Mar+del+Plata,+Buenos+Aires,+Argentina&aq=&sll=-38.012243,-57.540286&sspn=0.011868,0.022724&vpsrc=0&doflg=ptk&ie=UTF8&hq=&hnear=Olavarr%C3%ADa+2531,+Mar+del+Plata,+Buenos+Aires,+Argentina&t=m&z=16').
-          (View in map)
-        | <br>Mar del Plata, Buenos Aires
-      p
-        strong Phone:
-        a(href='tel:+54-9223-5926898') (+54) 9223 5926898
-      p
-        strong Mail:
-        a(href='mailto:hello@irbislab.com') hello@irbislab.com
-  #footer-nav
-    .container
-      nav(role='navigation')
-        ul.left
-          li
-            a(href='/') Home
-          li.last
-            a(href='/about.html') About
-        a.logo(href='/', title='Irbis Lab')
-          img(src='images/iso-wc.png', alt='Irbis Lab')
-        ul.right
-          li
-            a(href='/work.html') Work
-          li.last
-            a(href='mailto:hello@irbislab.com') Contact
-      #footer-links.sprite.social
-        a.sprite.icn.icn-tw.ir(target='_blank',
-          href='http://twitter.com/irbislab').
-          Follow Irbis Labs on Twitter
-        a.sprite.icn.icn-fb.ir(target='_blank',
-          href='https://facebook.com/IrbisLab').
-          Like Irbis Labs on Facebook
-      p.copy(role='contentinfo').
-        Copyright 2013 Irbis Lab. All Rights Reserved.
+  .container
+    .footer-logo
+      a(href='#home', title='Irbis Lab'): img(src='images/iso-wc.png', alt='Irbis Lab')
+
+    .footer-info
+        p
+          strong Find us at
+          a(target='_blank', href='http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Olavarr%C3%ADa+2531,+Mar+del+Plata,+Buenos+Aires,+Argentina&aq=&sll=-38.012243,-57.540286&sspn=0.011868,0.022724&vpsrc=0&doflg=ptk&ie=UTF8&hq=&hnear=Olavarr%C3%ADa+2531,+Mar+del+Plata,+Buenos+Aires,+Argentina&t=m&z=16') Olavarria 2531
+          | <br>Mar del Plata, Buenos Aires
+        p
+          strong Let's talk
+          a(href='tel:54-9223-5926898') (+54) 9223 5926898
+
+    .footer-links
+      .footer-nav(role='navigation')
+        h1 Irbis Lab
+        ul
+          li: a(href='#home') Home
+          li: a(href='#about') About
+          li: a(href='#services') Services
+          li: a(href='#our-process') Our Process
+          li: a(href='#team') Team
+          li: a(href='mailto:hello@irbislab.com') Get in Touch
+
+      .footer-social
+        h1 Elsewhere
+        ul
+          li: a(target='_blank', href='http://twitter.com/irbislab') Twitter
+          li: a(target='_blank', href='https://facebook.com/IrbisLab') Facebook
+
+    p.copy(role='contentinfo') Copyright 2013 Irbis Lab. All Rights Reserved.
 
 script(src='javascripts/lib.js')
 script(src='javascripts/app.js')
-script(src='javascripts/tap.js')
+script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
 script
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-38812148-1']);
   _gaq.push(['_trackPageview']);
-
   (function(){
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';

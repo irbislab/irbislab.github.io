@@ -1,0 +1,99 @@
+// media
+
+@mixin screen($res-min, $res-max) {
+  @media screen and (min-width: $res-min) and (max-width: $res-max) {
+    @content;
+  }
+}
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+// css3
+
+@mixin background-size($value) {
+  background-size: $value;
+  -moz-background-size: $value;
+  -webkit-background-size: $value;
+}
+
+@mixin box-sizing($values) {
+  box-sizing: $values;
+  -moz-box-sizing: $values;
+  -webkit-box-sizing: $values;
+}
+
+@mixin border-radius($values) {
+  background-clip: padding-box;
+  border-radius: $values;
+  -moz-background-clip: padding;
+  -moz-border-radius: $values;
+  -webkit-background-clip: padding-box;
+  -webkit-border-radius: $values;
+}
+
+@mixin box-shadow($x, $y, $offset, $hex, $inset:null, $spread:null) {
+  box-shadow: $x $y $offset $spread $hex $inset;
+  -moz-box-shadow: $x $y $offset $spread $hex $inset;
+  -webkit-box-shadow: $x $y $offset $spread $hex $inset;
+}
+
+@mixin transform($transforms) {
+  transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  -webkit-transform: $transforms;
+}
+
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($size) {
+  @include transform(scale(#{$size}));
+}
+
+@mixin transition($values...) {
+  transition: $values;
+  -moz-transition: $values;
+  -ms-transition: $values;
+  -o-transition: $values;
+  -webkit-transition: $values;
+}
+
+@mixin backface-visibility($value) {
+  backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -webkit-backface-visibility: $value;
+}
+
+@mixin animation($name) {
+  animation-name: $name;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -moz-animation-name: $name;
+  -moz-animation-duration: 1s;
+  -moz-animation-fill-mode: both;
+  -o-animation-name: $name;
+  -o-animation-duration: 1s;
+  -o-animation-fill-mode: both;
+  -webkit-animation-name: $name;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}

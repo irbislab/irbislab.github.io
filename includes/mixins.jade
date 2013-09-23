@@ -1,3 +1,4 @@
 mixin item(url, ak)
-  a(accesskey=ak, href=url, class=sel == url ? 'sel' : '')
-    block
+  li
+    a(accesskey=ak, href=url)
+      block

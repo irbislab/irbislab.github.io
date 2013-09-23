@@ -1,0 +1,25 @@
+!!! 5
+html
+  head
+    include includes/head
+  body#home
+    header
+      sel = '/'
+      include includes/header
+    #hs(role='banner')
+      .container
+        i.sprite.hi
+        hgroup
+          h1 We turn your ideas into awesome products.
+          h4.
+            We are a small team of developers who are passionate
+            about creating great products.
+    #content(role='main')
+      .container
+        include includes/projects
+        include includes/wwd
+        #new-project
+          p Have a Project in Mind?
+          a.sprite.get-in-touch(href='mailto:hello@irbislab.com')
+            b Get in Touch
+    include includes/footer

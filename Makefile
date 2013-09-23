@@ -2,9 +2,7 @@ JADE = ./node_modules/.bin/jade
 SASS = ./node_modules/.bin/node-sass
 
 HTML = 404.html \
-	index.html \
-	about.html \
-	work.html
+	index.html
 
 CSS = stylesheets/style.css
 
