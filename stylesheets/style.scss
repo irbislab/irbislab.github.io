@@ -131,9 +131,10 @@ $bp1: 760px;
 }
 
 .header {
-  background: $pink url(/images/mountains.jpg) no-repeat;
+  background-image: url(/images/mountains.jpg);
   background-attachment: scroll;
-  background-position: center top;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -250,7 +251,7 @@ nav {
   h1, h2 {
     font: {
       size: 2.6em;
-      weight: 600;
+      weight: 500;
     }
     margin-bottom: 0.33333em;
 
