@@ -1,9 +1,11 @@
-irbislab.com
-Irbis Lab website.
+# irbislab.com
 
-Building
+Irbislab landing page.
 
 Setup:
 
+```
+$ npm install -g serve
 $ serve . &
 $ open http://localhost:3000
+```
