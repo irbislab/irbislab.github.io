@@ -1,9 +1,0 @@
-{
-  "name": "irbislab.com",
-  "private": true,
-  "version": "0.0.0",
-  "dependencies": {
-    "jade": "0.27.x",
-    "node-sass": "0.8.x"
-  }
-}
